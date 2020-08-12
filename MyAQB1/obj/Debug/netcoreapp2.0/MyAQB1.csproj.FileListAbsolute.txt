@@ -27,7 +27,6 @@ C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\bin\Debug\netcoreapp2.0\ActiveQuery
 C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\MyAQB1.csproj.CopyComplete
 C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\bin\Debug\netcoreapp2.0\ActiveQueryBuilder.json
 C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\bin\Debug\netcoreapp2.0\bower.json
-C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\MyAQB1.csprojAssemblyReference.cache
 C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\MyAQB1.RazorAssemblyInfo.cache
 C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\MyAQB1.RazorAssemblyInfo.cs
 C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\MyAQB1.TagHelpers.input.cache

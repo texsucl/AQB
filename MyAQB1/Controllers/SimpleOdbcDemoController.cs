@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using ActiveQueryBuilder.Core;
+using ActiveQueryBuilder.Core.QueryTransformer;
 using ActiveQueryBuilder.Web.Core;
 using ActiveQueryBuilder.Web.Server;
 using ActiveQueryBuilder.Web.Server.Services;
@@ -13,15 +16,18 @@ namespace MVC_Samples.Controllers
 {
     public class SimpleOdbcDemoController : Controller
     {
+        private const string filename = "UserQueriesStructure.xml";
         private string instanceId = "SimpleOledbDemo";
-        
+
+        private readonly IHostingEnvironment _env;
         private readonly IQueryBuilderService _aqbs;
 
         // Use IQueryBuilderService to get access to the server-side instances of Active Query Builder objects. 
         // See the registration of this service in the Startup.cs.
-        public SimpleOdbcDemoController(IQueryBuilderService aqbs)
+        public SimpleOdbcDemoController(IQueryBuilderService aqbs, IHostingEnvironment env)
         {
             _aqbs = aqbs;
+            _env = env;
         }
 
         public ActionResult Index()
@@ -33,6 +39,38 @@ namespace MVC_Samples.Controllers
                 qb = CreateQueryBuilder();
 
             return View(qb);
+        }
+
+        public ActionResult GetData()
+        {
+            var qb = _aqbs.Get(instanceId);
+            var conn = qb.MetadataProvider.Connection;
+
+            var sqlQuery = new SQLQuery(qb.SQLContext)
+            {
+                SQL = qb.ActiveUnionSubQuery.SQL
+            };
+
+            QueryTransformer qt = new QueryTransformer
+            {
+                QueryProvider = sqlQuery
+            };
+
+            qt.Take("7");
+
+            var columns = qt.Columns.Select(c => c.ResultName).ToList();
+
+            try
+            {
+                var data = DataBaseHelper.GetDataList(conn, qt.SQL);
+                var result = new { columns, data };
+                return Json(result);
+            }
+            catch (Exception e)
+            {
+                var result = new { columns, data = new List<List<object>> { new List<object> { e.Message } } };
+                return Json(result);
+            }
         }
 
         /// <summary>
@@ -62,10 +100,40 @@ namespace MVC_Samples.Controllers
                 Connection = DataBaseHelper.CreateOdbcConnection(connectionString)
             };
 
+            //Comment these 2 lines for using browser localStorage
+            ImportUserQueriesFromFile(queryBuilder.UserQueries);
+            queryBuilder.UserQueries.Changed += ExportUserQueriesToFile;
+
             // Assign the initial SQL query text the user sees on the _first_ page load
-            queryBuilder.SQL = GetDefaultSql();
+            //queryBuilder.SQL = GetDefaultSql();
 
             return queryBuilder;
+        }
+
+        private void ExportUserQueriesToFile(object sender, MetadataStructureItem item)
+        {
+            var uq = (UserQueriesContainer)sender;
+            uq.ExportToXML(_env.WebRootPath + @"/../" + filename);
+        }
+
+        private void ImportUserQueriesFromFile(UserQueriesContainer uqc)
+        {
+            var file = _env.WebRootPath + @"/../" + filename;
+
+            if (System.IO.File.Exists(file))
+                uqc.ImportFromXML(file);
+        }
+
+        public void GetUserQueriesXml()
+        {
+            var qb = _aqbs.Get(instanceId);
+            qb.UserQueries.ExportToXML(Response.Body);
+        }
+
+        public void LoadUserQueries(string xml)
+        {
+            var qb = _aqbs.Get(instanceId);
+            qb.UserQueries.XML = xml;
         }
 
         //private string GetDefaultSql()
