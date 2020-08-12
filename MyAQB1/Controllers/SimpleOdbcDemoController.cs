@@ -42,7 +42,8 @@ namespace MVC_Samples.Controllers
         private QueryBuilder CreateQueryBuilder()
         {
             // Define connection string here
-            var connectionString = @"Driver={SQL Server};Server=(local);Uid=User;Pwd=Passw0rd;Database=Northwind;";
+            //var connectionString = @"Driver={SQL Server};Server=(local);Uid=User;Pwd=Passw0rd;Database=Northwind;";
+            var connectionString = "";
 
             if (string.IsNullOrEmpty(connectionString))
                 throw new ApplicationException("Connection string is not set");
@@ -67,20 +68,20 @@ namespace MVC_Samples.Controllers
             return queryBuilder;
         }
 
-        private string GetDefaultSql()
-        {
-            return @"select CustomerID,City from Customers ";
-        }
         //private string GetDefaultSql()
         //{
-        //    return @"Select o.OrderID,
-        //              c.CustomerID As a1,
-        //              c.CompanyName,
-        //              s.ShipperID
-        //            From (Orders o
-        //              Inner Join Customers c On o.CustomerID = c.CustomerID)
-        //              Inner Join Shippers s On s.ShipperID = o.ShipperID
-        //            Where o.Ship_City = 'A'";
+        //    return @"select CustomerID,City from Customers ";
         //}
+        private string GetDefaultSql()
+        {
+            return @"Select o.OrderID,
+                      c.CustomerID As a1,
+                      c.CompanyName,
+                      s.ShipperID
+                    From (Orders o
+                      Inner Join Customers c On o.CustomerID = c.CustomerID)
+                      Inner Join Shippers s On s.ShipperID = o.ShipperID
+                    Where o.Ship_City = 'A'";
+        }
     }
 }

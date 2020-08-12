@@ -53,3 +53,5 @@ C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\bin\Debug\netcoreapp2.0\MyAQB1.View
 C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\MyAQB1.csproj.CoreCompileInputs.cache
 C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\MyAQB1.Views.pdb
 C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\Razor\Views\SimpleOdbcDemo\Index.cshtml.g.cs
+C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\Razor\Views\SaveAndLoadUserQueries\Index.cshtml.g.cs
+C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\Razor\Views\SubQueryResultsPreviewDemo\Index.cshtml.g.cs
