@@ -26,11 +26,20 @@
     <Reference Include="ActiveQueryBuilder.Core">
       <HintPath>assemblies_NETCore\ActiveQueryBuilder.Core.dll</HintPath>
     </Reference>
+    <Reference Include="ActiveQueryBuilder.DB2MetadataProvider">
+      <HintPath>assemblies_NETCore\ActiveQueryBuilder.DB2MetadataProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveQueryBuilder.MSSQLMetadataProvider">
+      <HintPath>assemblies_NETCore\ActiveQueryBuilder.MSSQLMetadataProvider.dll</HintPath>
+    </Reference>
     <Reference Include="ActiveQueryBuilder.ODBCMetadataProvider">
       <HintPath>assemblies_NETCore\ActiveQueryBuilder.ODBCMetadataProvider.dll</HintPath>
     </Reference>
     <Reference Include="ActiveQueryBuilder.OLEDBMetadataProvider">
       <HintPath>assemblies_NETCore\ActiveQueryBuilder.OLEDBMetadataProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveQueryBuilder.OracleNativeMetadataProvider">
+      <HintPath>assemblies_NETCore\ActiveQueryBuilder.OracleNativeMetadataProvider.dll</HintPath>
     </Reference>
     <Reference Include="ActiveQueryBuilder.SQLiteMetadataProvider">
       <HintPath>assemblies_NETCore\ActiveQueryBuilder.SQLiteMetadataProvider.dll</HintPath>

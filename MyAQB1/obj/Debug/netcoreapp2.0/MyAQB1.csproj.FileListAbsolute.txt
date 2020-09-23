@@ -56,3 +56,10 @@ C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\Razor\Views
 C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\bin\Debug\netcoreapp2.0\ActiveQueryBuilder.OLEDBMetadataProvider.dll
 C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\bin\Debug\netcoreapp2.0\ActiveQueryBuilder.OLEDBMetadataProvider.xml
 C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\MyAQB1.csproj.CoreCompileInputs.cache
+C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\bin\Debug\netcoreapp2.0\ActiveQueryBuilder.DB2MetadataProvider.dll
+C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\bin\Debug\netcoreapp2.0\ActiveQueryBuilder.MSSQLMetadataProvider.dll
+C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\bin\Debug\netcoreapp2.0\ActiveQueryBuilder.OracleNativeMetadataProvider.dll
+C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\bin\Debug\netcoreapp2.0\ActiveQueryBuilder.DB2MetadataProvider.xml
+C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\bin\Debug\netcoreapp2.0\ActiveQueryBuilder.MSSQLMetadataProvider.xml
+C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\bin\Debug\netcoreapp2.0\ActiveQueryBuilder.OracleNativeMetadataProvider.xml
+C:\Users\Texsucl\Desktop\AQBT1\MyAQB1\MyAQB1\obj\Debug\netcoreapp2.0\MyAQB1.csprojAssemblyReference.cache

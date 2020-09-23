@@ -37,8 +37,11 @@
           "System.Data.OleDb": "4.7.1",
           "System.Data.SQLite.Core": "1.0.113.1",
           "ActiveQueryBuilder.Core": "3.6.9.1166",
+          "ActiveQueryBuilder.DB2MetadataProvider": "3.6.9.1166",
+          "ActiveQueryBuilder.MSSQLMetadataProvider": "3.6.9.1166",
           "ActiveQueryBuilder.ODBCMetadataProvider": "3.6.9.1166",
           "ActiveQueryBuilder.OLEDBMetadataProvider": "3.6.9.1166",
+          "ActiveQueryBuilder.OracleNativeMetadataProvider": "3.6.9.1166",
           "ActiveQueryBuilder.SQLiteMetadataProvider": "3.6.9.1166",
           "ActiveQueryBuilder.View": "3.6.9.1166",
           "ActiveQueryBuilder.Web.Core.NETCore": "3.6.9.409",
@@ -2630,6 +2633,28 @@
           "ActiveQueryBuilder.Core.dll": {}
         }
       },
+      "ActiveQueryBuilder.DB2MetadataProvider/3.6.9.1166": {
+        "runtime": {
+          "ActiveQueryBuilder.DB2MetadataProvider.dll": {
+            "assemblyVersion": "3.6.9.1166",
+            "fileVersion": "3.6.9.1166"
+          }
+        },
+        "compile": {
+          "ActiveQueryBuilder.DB2MetadataProvider.dll": {}
+        }
+      },
+      "ActiveQueryBuilder.MSSQLMetadataProvider/3.6.9.1166": {
+        "runtime": {
+          "ActiveQueryBuilder.MSSQLMetadataProvider.dll": {
+            "assemblyVersion": "3.6.9.1166",
+            "fileVersion": "3.6.9.1166"
+          }
+        },
+        "compile": {
+          "ActiveQueryBuilder.MSSQLMetadataProvider.dll": {}
+        }
+      },
       "ActiveQueryBuilder.ODBCMetadataProvider/3.6.9.1166": {
         "runtime": {
           "ActiveQueryBuilder.ODBCMetadataProvider.dll": {
@@ -2650,6 +2675,17 @@
         },
         "compile": {
           "ActiveQueryBuilder.OLEDBMetadataProvider.dll": {}
+        }
+      },
+      "ActiveQueryBuilder.OracleNativeMetadataProvider/3.6.9.1166": {
+        "runtime": {
+          "ActiveQueryBuilder.OracleNativeMetadataProvider.dll": {
+            "assemblyVersion": "3.6.9.1166",
+            "fileVersion": "3.6.9.1166"
+          }
+        },
+        "compile": {
+          "ActiveQueryBuilder.OracleNativeMetadataProvider.dll": {}
         }
       },
       "ActiveQueryBuilder.SQLiteMetadataProvider/3.6.9.1166": {
@@ -4215,12 +4251,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "ActiveQueryBuilder.DB2MetadataProvider/3.6.9.1166": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ActiveQueryBuilder.MSSQLMetadataProvider/3.6.9.1166": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
     "ActiveQueryBuilder.ODBCMetadataProvider/3.6.9.1166": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
     "ActiveQueryBuilder.OLEDBMetadataProvider/3.6.9.1166": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ActiveQueryBuilder.OracleNativeMetadataProvider/3.6.9.1166": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
