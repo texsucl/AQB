@@ -14,6 +14,7 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="System.Data.Odbc" Version="4.5.0" />
+    <PackageReference Include="System.Data.OleDb" Version="4.7.1" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.1" />
   </ItemGroup>
 
@@ -27,6 +28,9 @@
     </Reference>
     <Reference Include="ActiveQueryBuilder.ODBCMetadataProvider">
       <HintPath>assemblies_NETCore\ActiveQueryBuilder.ODBCMetadataProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveQueryBuilder.OLEDBMetadataProvider">
+      <HintPath>assemblies_NETCore\ActiveQueryBuilder.OLEDBMetadataProvider.dll</HintPath>
     </Reference>
     <Reference Include="ActiveQueryBuilder.SQLiteMetadataProvider">
       <HintPath>assemblies_NETCore\ActiveQueryBuilder.SQLiteMetadataProvider.dll</HintPath>

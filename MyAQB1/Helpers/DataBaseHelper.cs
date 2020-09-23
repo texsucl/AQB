@@ -5,6 +5,7 @@ using System.IO;
 using ASP.NET_Core.Controllers;
 using System.Data.Odbc;
 using Microsoft.AspNetCore.Http;
+using System.Data.OleDb;
 
 namespace ASP.NET_Core.Helpers
 {
@@ -147,6 +148,25 @@ namespace ASP.NET_Core.Helpers
         public static IDbConnection CreateOdbcConnection(string connectionString)
         {
             return new OdbcConnection(connectionString);
+        }
+
+        /// <summary>
+        /// Creates DBConnection object for MS Access database.
+        /// </summary>
+        /// <param name="AConfigurationName">Name of database configuration stored in the Web.Config file.</param>
+        /// <returns>Returns an instance of OLEDBConnection.</returns>
+        public static IDbConnection CreateMSAccessConnection(string AConfigurationName)
+        {
+            //var provider = "Microsoft.ACE.OLEDB.12.0";
+            //var provider = "Microsoft.Jet.OLEDB.4.0";
+
+            // File name stored in the "/configuration/appSettings/<configuration name>" key
+            //var path = ConfigurationManager.AppSettings[AConfigurationName];
+            //var file = Path.Combine(HttpContext.Current.Server.MapPath("~"), path);
+            //var connectionString = string.Format("Provider={0};Data Source={1};Persist Security Info=False;", provider, file);
+
+            //return new OleDbConnection(connectionString);
+            return new OleDbConnection(AConfigurationName);
         }
     }
 }

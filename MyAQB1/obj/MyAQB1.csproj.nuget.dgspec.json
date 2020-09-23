@@ -85,6 +85,10 @@
               "target": "Package",
               "version": "[4.5.0, )"
             },
+            "System.Data.OleDb": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            },
             "System.Data.SQLite.Core": {
               "target": "Package",
               "version": "[1.0.113.1, )"

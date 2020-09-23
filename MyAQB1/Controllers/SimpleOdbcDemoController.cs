@@ -93,12 +93,25 @@ namespace MVC_Samples.Controllers
             // Turn this property on to suppress parsing error messages when user types non-SELECT statements in the text editor.
             queryBuilder.BehaviorOptions.AllowSleepMode = false;
 
+            #region ODBC
             // Bind Active Query Builder to a live database connection.
-            queryBuilder.MetadataProvider = new ODBCMetadataProvider
+            //queryBuilder.MetadataProvider = new ODBCMetadataProvider
+            //{
+            //    // Assign an instance of DBConnection object to the Connection property.
+            //    Connection = DataBaseHelper.CreateOdbcConnection(connectionString)
+            //};
+            #endregion
+
+            #region OleDb
+            // Bind Active Query Builder to a live database connection.
+            queryBuilder.MetadataProvider = new OLEDBMetadataProvider
             {
                 // Assign an instance of DBConnection object to the Connection property.
-                Connection = DataBaseHelper.CreateOdbcConnection(connectionString)
+                Connection = DataBaseHelper.CreateMSAccessConnection("NorthwindDataBase")
             };
+            #endregion
+
+
 
             //Comment these 2 lines for using browser localStorage
             ImportUserQueriesFromFile(queryBuilder.UserQueries);
